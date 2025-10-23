@@ -1,0 +1,10 @@
+#birth_date=(2001,6,23)
+#unpack
+#year,month,day=(2001,6,23)
+year,month,day=(2001,6,23)
+#month=birth_date[1]
+#year=birth_date[0]
+#day=birth_date[2]
+print("year=",year)
+print("month=",month)
+print("day=",day)
