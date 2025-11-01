@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
+from my_module import *
 #int   IntVar()
 #float   DoubleVar()
 #str StringVar()
@@ -7,13 +8,17 @@ from tkinter import messagebox
 
 person_list=[]
 def save():
-    person={"id":id.get(),"name":name.get(),"family":family.get()}
-    person_list.append(person)
-    messagebox.showinfo("Saved","Saved Successfully")
-    id.set(0) #بعد از سیو کردن مقدار اتوماتیک صفر شود
-    name.set("") #بعد از سیو کردن مقدار خالی شود
-    family.set("") #بعد از سیو کردن مقدار خالی شود
-
+    try:
+        name_validator(name.get())
+        family_validator(name.get())
+        person={"id":id.get(),"name":name.get(),"family":family.get()}
+        person_list.append(person)
+        messagebox.showinfo("Saved","Saved Successfully")
+        id.set(0) #بعد از سیو کردن مقدار اتوماتیک صفر شود
+        name.set("") #بعد از سیو کردن مقدار خالی شود
+        family.set("") #بعد از سیو کردن مقدار خالی شود
+    except Exception as e:
+        messagebox.showerror("Error",f"Error: {e}")
 window = Tk() #پنجره خالی
 #window.config(background="black")
 
