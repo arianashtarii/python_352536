@@ -8,6 +8,6 @@ students=[
 full_names=[]
 
 def full_names(std_dict):
-    return std_dict["name"].capitalize().strip()+""+std_dict["family"].capitalize().strip()
+    return std_dict["name"].capitalize().strip()+" "+std_dict["family"].capitalize().strip()
 
 print(list(map(full_names,students)))
