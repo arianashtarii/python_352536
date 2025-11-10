@@ -1,13 +1,11 @@
 import re
-class Student:
-    def __init__(self,code,name,title,units,teacher):
+class Course:
+    def __init__(self,code,title,units,teacher):
         self.code=code
-        self.name=name
         self.title=title
         self.units=units
         self.teacher=teacher
-    def student_validation(self):
-        return re.match(r"^[A-Z][a-z]\s{3,30}$",self.name)
+
     def student_validation_2(self):
         return re.match(r"^[A-Z][a-z]\s{3,30}$",self.title)
     def student_validation_3(self):
@@ -17,6 +15,15 @@ class Student:
     def student_validation_5(self):
         return re.match(r"^[0,9]\s{3,10}$",self.code)
 
-    math = Student(1234,"","math",2,"Ahmad Ahmadi") #Todo
-    physics = Student("","","","","") #Todo
-    chemistry = Student("","","","","") #Todo
+
+
+
+math = Course(1234,"math",2,"Ahmad Ahmadi")
+print(math.__dict__)
+
+physics = Course(2345,"phys","3","reza")
+print(physics.__dict__)
+
+chemistry = Course(4567,"chem","4","omid")
+print(chemistry.__dict__)
+​
