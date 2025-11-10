@@ -18,5 +18,5 @@ class Student:
         return re.match(r"^[0,9]\s{3,10}$",self.code)
 
     math = Student(1234,"","math",2,"Ahmad Ahmadi") #Todo
-    physics = Student("","","","","")
-    chemistry = Student("","","","","")
+    physics = Student("","","","","") #Todo
+    chemistry = Student("","","","","") #Todo
