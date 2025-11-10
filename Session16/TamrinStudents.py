@@ -26,4 +26,3 @@ print(physics.__dict__)
 
 chemistry = Course(4567,"chem","4","omid")
 print(chemistry.__dict__)
-​
