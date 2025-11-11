@@ -7,6 +7,9 @@ class Person:
         self.id = id
         self.name = name
         self.family = family
+        self.teacher = None
+        self.address = None
+        self.email = None
 
     def save(self):
         print("Saved Person...",self.name,self.family)
@@ -16,9 +19,19 @@ class Person:
 
     def test(self,a):
         print(a)
+
+    def __repr__(self): #تعریف تابعی که میخوای مقادیر چاپ شوند به جای آدرس
+        return f"{self.id}-{self.name:10}-{self.family:10}-{self.address}-{self.teacher}"
 #نمونه سازی یا شی سازی
 person_1=Person(1,"Arian","Ashtari")
+person_1.name="AhmadReza"
+person_1.address="Tehran"
+person_1.email="AR@gmail.com"
+print(person_1)
 person_2=Person(2,"Reza","Rezaei")
+person_2.address="Tabriz"
+person_2.email="RR@gmail.com"
+print(person_2)
 person_3=Person(3,"Mohsen","Akbari")
 
 #ذخیره سازی

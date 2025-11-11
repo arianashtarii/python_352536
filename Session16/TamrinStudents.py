@@ -14,7 +14,7 @@ class Course:
         return re.match(r"^[A-Z][a-z]\s{3,30}$",self.teacher)
     def student_validation_5(self):
         return re.match(r"^[0,9]\s{3,10}$",self.code)
-
+    
 
 
 
